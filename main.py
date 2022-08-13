@@ -44,4 +44,4 @@ number_of_surahs = int(number_of_surahs[12:])
 
 
 for surah in range((number_of_surahs)):
-    driver.find_ele
+    driver.find_el
