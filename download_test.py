@@ -5,7 +5,11 @@ from selenium.webdriver.common.by import By
   
 PATH = "D:\webdriver\chromedriver.exe"
 # Open Chrome
-driver = webdriver.Chrome(PATH)
+op = webdriver.ChromeOptions()
+prefs = {"download.default_directory" : "D:\quran"}
+op.add_experimental_option("prefs",prefs)
+
+driver = webdriver.Chrome(PATH, options=op)
   
 # Open URL
 driver.get('http://demo.automationtesting.in/FileDownload.html')
